@@ -1,5 +1,9 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from "./components/HelloWorld.vue";
+import { useFetch } from "./composables/useFetch.js";
+const { data, error, isLoading } = useFetch(
+  "https://jsonplaceholder.typicode.com/todos/1"
+);
 </script>
 
 <template>
